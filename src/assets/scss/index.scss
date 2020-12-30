@@ -1,19 +1,11 @@
-// @import '~normalize.css';
-// @import 'variable';
+@import '~normalize.css';
+@import 'variable';
+@import 'utils/mixins';
+@import 'utils/settings';
+@import 'utils/grid';
+@import 'fonts';
+@import 'button';
 
-@font-face {
-    font-family: 'notosans';
-    src: url('../fonts/notosans.woff2') format('woff2');
-    font-weight: 400;
-    font-display: swap;
-    font-style: normal;
-}
-
-body {
-    background: yellowgreen;
-    // background: url(../img/1.png) no-repeat center;
-    background-size: cover;
-    color: #000;
-    // display: flex;
-    font-family: 'notosans';
-}
+@import 'interface';
+// page index
+@import 'header';

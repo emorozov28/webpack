@@ -62,12 +62,12 @@ module.exports = {
                 quality: '80-85'
             }
         }),
-        new CopyWebpackPlugin({
-           patterns: [{
-              from: path.resolve(__dirname, 'src/pages'),
-               to: path.resolve(__dirname, 'dist')
-           }]
-        })
+        // new CopyWebpackPlugin({
+        //    patterns: [{
+        //       from: path.resolve(__dirname, 'src/pages'),
+        //        to: path.resolve(__dirname, 'dist')
+        //    }]
+        // })
     ],
     devtool: isProd ? false : 'source-map',
     module: {
