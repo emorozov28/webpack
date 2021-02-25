@@ -133,7 +133,7 @@ module.exports = {
 function optimization() {
     const configObj = {
         splitChunks: {
-            chunks: 'all'
+            chunks: 'all' // разделение кода js
         }
     };
 
