@@ -1,4 +1,45 @@
-
 body {
-    font-family: 'notosans', sans-serif;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  background-color: #fff;
+  // color: var(--color-dark);
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.title {
+  font-size: 48px;
+  line-height: 1.25;
+  font-weight: 700;
+  text-align: center;
+}
+
+.block-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.w-wrap {
+  word-break: break-word;
+  word-wrap: break-word;
+  overflow-wrap: break-word
+}
+
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 36px;
+  }
+
+}
+@media (max-width: 575px) {
+  .title {
+    font-size: 30px;
+  }
+
 }

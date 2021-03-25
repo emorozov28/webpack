@@ -1,11 +1,22 @@
 @import '~normalize.css';
 @import 'variable';
-@import 'utils/mixins';
 @import 'utils/settings';
 @import 'utils/grid';
 @import 'fonts';
 @import 'button';
 
 @import 'interface';
+
 // page index
 @import 'header';
+@import 'intro';
+@import 'services';
+@import 'price';
+@import 'repair';
+@import 'auto-parts';
+@import 'portfolio';
+
+
+@import '../libs/modal/modal.css';
+@import 'modal';
+

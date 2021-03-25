@@ -1,27 +1,104 @@
 .btn {
     border: none;
     background-color: transparent;
-    padding: 10px 25px;
+    padding: 24px 45px;
     cursor: pointer;
-    transition: background-color .3s, color .3s, box-shadow .3s;
-    outline: none;
+    position: relative;
+    box-sizing: border-box;
+    transition: background-color .3s ease-in-out;
 
     &:disabled {
         cursor: default;
         opacity: .7;
-
-        &:hover, &:focus, &:active {
-            box-shadow: none;
-        }
     }
 
-    &:hover {
-        transition: background-color .3s, color .3s, box-shadow .3s;
-        box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.75);
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
+        transition: background-color .3s ease-in-out;
     }
 }
 
-.btn-success {
-    background-color: var(--color-success);
-    color: var(--color-white);
+.btn-red {
+    background-color: var(--color-red);
+    text-transform: uppercase;
+    box-shadow: 0px 4px 15px 5px rgba(189, 24, 24, 0.25);
+    border-radius: 50px;
+    border: 3px solid transparent;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
+        transition: background-color .3s ease-in-out, border .3s ease-in-out;
+        background-color: #fff;
+        border: 3px solid var(--color-red);
+        color: var(--color-dark);
+    }
+}
+
+.btn-outline-red {
+    background-color: #fff;
+    border: 3px solid var(--color-red);
+    color: var(--color-dark);
+    text-transform: uppercase;
+    box-shadow: 0px 4px 15px 3px rgba(189, 24, 24, 0.25);
+    border-radius: 50px;
+    font-size: 24px;
+    font-weight: 500;
+
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
+        transition: background-color .3s ease-in-out, border .3s ease-in-out;
+        background-color: var(--color-red);
+        color: #fff;
+    }
+}
+
+.burger-menu {
+    width: 32px;
+    height: 25px;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+    position: absolute;
+    z-index: 200;
+    top: 16px;
+    left: 40px;
+
+    &.active {
+
+        span {
+            background-color: #fff;
+
+            &:nth-child(2) {
+                width: 70%;
+            }
+
+            &:nth-child(3) {
+                width: 0%
+            }
+        }
+    }
+
+    span {
+        background-color: #000;
+        height: 4px;
+        width: 100%;
+        border-radius: 5px;
+        transition: width .4s;
+    }
+}
+
+@media (max-width: 576px) {
+    .btn {
+        font-size: 16px;
+        padding: 16px 35px;
+    }
+}
+
+@media (max-width: 420px) {
+    .burger-menu {
+        left: 20px;
+    }
 }

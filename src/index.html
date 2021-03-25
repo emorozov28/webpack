@@ -4,18 +4,393 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>АВТОДОМ | Ремонт автомобилей в Екатеринбурге</title>
+    <meta name="title" content="АВТОДОМ | Ремонт автомобилей в Екатеринбурге" />
 
     <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content="" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <header class="header" id="header">
-
+    <header class="header">
+        <div class="container header__container">
+            <button class="burger-menu btn-reset"><span></span><span></span><span></span></button>
+            <a href="#" class="header__logo logo"><img src="assets/img/logo.png" alt="logo"></a>
+            <div class="header__info header-cont">
+                <svg class="icon header__icon" width="36" height="34" viewBox="0 0 36 34" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                        <path
+                            d="M17.9987 0C8.36383 0 5.41895 7.08571 5.41895 13.0184C5.41895 21.6126 15.5899 34.0001 17.9987 34.0001C20.5579 34.0001 30.5809 21.5182 30.5809 13.0184C30.5809 7.08571 27.6336 0 17.9987 0ZM18.0011 17.0251C14.8902 17.0251 12.3698 14.6446 12.3698 11.7077C12.3698 8.7697 14.8903 6.38932 18.0011 6.38932C21.1095 6.38932 23.63 8.76977 23.63 11.7077C23.63 14.6446 21.1096 17.0251 18.0011 17.0251Z"
+                            fill="#F11616" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0">
+                            <rect width="36" height="34" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+                <div class="wrap">
+                    г. Екатеринбург, <br>
+                    ул. Начдива Онуфриева, 55
+                </div>
+            </div>
+            <div class="header__info header-cont">
+                <svg class="icon header__icon" width="30" height="30" viewBox="0 0 30 30" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M15 0C6.72867 0 0 6.72867 0 15C0 23.2713 6.72867 30 15 30C23.2713 30 30 23.2713 30 15C30 6.72867 23.2713 0 15 0ZM22.1338 22.7586C21.89 23.0024 21.5701 23.1251 21.2501 23.1251C20.9301 23.1251 20.6099 23.0024 20.3664 22.7586L14.1163 16.5088C13.8812 16.2751 13.7501 15.9574 13.7501 15.6251V7.5C13.7501 6.80878 14.3099 6.25008 15 6.25008C15.6901 6.25008 16.2499 6.80878 16.2499 7.5V15.1076L22.1338 20.9912C22.6225 21.4801 22.6225 22.27 22.1338 22.7586Z"
+                        fill="#F11616" />
+                </svg>
+                <div class="wrap">
+                    Пн-пт: 10:00 - 20:00 <br>
+                    сб-вс: 10:00 - 17:00
+                </div>
+            </div>
+            <div class="header__wrap">
+                <div class="header__info">
+                    <svg class="icon header__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0)">
+                            <path
+                                d="M9.93825 14.0619C7.64749 11.7712 7.13025 9.4804 7.01356 8.56261C6.98096 8.30884 7.06829 8.05434 7.24984 7.87405L9.10363 6.02109C9.37633 5.74856 9.42472 5.32384 9.22032 4.99695L6.26874 0.413779C6.0426 0.0518134 5.5783 -0.0788237 5.1966 0.112124L0.458253 2.34371C0.149588 2.4957 -0.0319649 2.82365 0.00308067 3.16592C0.251357 5.52454 1.27963 11.3226 6.97756 17.021C12.6755 22.7193 18.4727 23.7472 20.8326 23.9954C21.1749 24.0305 21.5028 23.8489 21.6548 23.5403L23.8864 18.8019C24.0766 18.421 23.9469 17.958 23.5864 17.7314L19.0032 14.7807C18.6765 14.5761 18.2518 14.6241 17.9791 14.8965L16.1261 16.7503C15.9458 16.9319 15.6913 17.0192 15.4376 16.9866C14.5198 16.8699 12.229 16.3527 9.93825 14.0619Z"
+                                fill="#F11616" />
+                            <path
+                                d="M19.0347 12.8276C18.5776 12.8276 18.2071 12.4571 18.2071 12C18.2032 8.57365 15.4266 5.79699 12.0002 5.79311C11.5431 5.79311 11.1726 5.42259 11.1726 4.96553C11.1726 4.50846 11.5431 4.13794 12.0002 4.13794C16.3403 4.14273 19.8575 7.6599 19.8623 12C19.8623 12.4571 19.4917 12.8276 19.0347 12.8276Z"
+                                fill="#F11616" />
+                            <path
+                                d="M23.1726 12.8276C22.7155 12.8276 22.345 12.4571 22.345 12C22.3386 6.28936 17.7108 1.66156 12.0002 1.65517C11.5431 1.65517 11.1726 1.28465 11.1726 0.827586C11.1726 0.370523 11.5431 0 12.0002 0C18.6246 0.0072976 23.9929 5.37561 24.0002 12C24.0002 12.2195 23.913 12.43 23.7578 12.5852C23.6026 12.7404 23.3921 12.8276 23.1726 12.8276Z"
+                                fill="#F11616" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0">
+                                <rect width="24" height="24" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <a href="tel:+79870191165" class="link-info">+7 987 019-11-65</a>
+                </div>
+                <div class="header__info">
+                    <div class="social header__social">
+                        <a href="#" class="social__link">
+                            <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.5 33C25.6127 33 33 25.6127 33 16.5C33 7.3873 25.6127 0 16.5 0C7.3873 0 0 7.3873 0 16.5C0 25.6127 7.3873 33 16.5 33Z"
+                                    fill="#4D76A1" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M15.8768 23.7367H17.1719C17.1719 23.7367 17.5631 23.6938 17.7628 23.4785C17.9466 23.2808 17.9407 22.9096 17.9407 22.9096C17.9407 22.9096 17.9154 21.1719 18.7219 20.916C19.517 20.664 20.5379 22.5955 21.62 23.3382C22.4382 23.9003 23.06 23.777 23.06 23.777L25.9534 23.7367C25.9534 23.7367 27.467 23.6435 26.7493 22.4534C26.6905 22.3561 26.3313 21.5731 24.598 19.9642C22.7838 18.2803 23.0268 18.5527 25.2122 15.64C26.5431 13.8661 27.0752 12.7831 26.909 12.3192C26.7505 11.8775 25.7716 11.9942 25.7716 11.9942L22.5138 12.0145C22.5138 12.0145 22.2724 11.9816 22.0932 12.0887C21.9182 12.1937 21.8056 12.4384 21.8056 12.4384C21.8056 12.4384 21.29 13.8111 20.6023 14.9785C19.1517 17.4418 18.5716 17.5718 18.3346 17.4188C17.7831 17.0624 17.9207 15.9867 17.9207 15.2226C17.9207 12.8354 18.2828 11.8401 17.2157 11.5825C16.8616 11.4969 16.601 11.4404 15.6954 11.4313C14.533 11.4192 13.5491 11.4348 12.992 11.7078C12.6214 11.8892 12.3355 12.2937 12.5097 12.3169C12.725 12.3457 13.2126 12.4484 13.4712 12.8004C13.805 13.2546 13.7932 14.2746 13.7932 14.2746C13.7932 14.2746 13.985 17.0847 13.3453 17.4338C12.9061 17.6733 12.3038 17.1844 11.0105 14.9496C10.3478 13.8049 9.8475 12.5396 9.8475 12.5396C9.8475 12.5396 9.75103 12.3031 9.57896 12.1766C9.37013 12.0234 9.07836 11.9745 9.07836 11.9745L5.98266 11.9948C5.98266 11.9948 5.51793 12.0078 5.34734 12.2098C5.19557 12.3895 5.33528 12.7613 5.33528 12.7613C5.33528 12.7613 7.7589 18.4315 10.5031 21.289C13.0194 23.9088 15.8768 23.7367 15.8768 23.7367Z"
+                                    fill="white" />
+                            </svg>
+                            <span class="v-hidden">Вконтакте</span></a>
+                        <a href="#" class="social__link">
+                            <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0)">
+                                    <path
+                                        d="M2.06259 2.24556C-0.530659 4.93919 9.08747e-05 7.80056 9.08747e-05 16.4933C9.08747e-05 23.7121 -1.25941 30.9487 5.33234 32.6523C7.39072 33.1817 25.6287 33.1817 27.6843 32.6496C30.4288 31.9414 32.6618 29.7153 32.9671 25.8337C33.0097 25.2919 33.0097 7.70431 32.9657 7.15156C32.6412 3.01694 30.0961 0.634061 26.7425 0.151436C25.9738 0.0400609 25.8198 0.00706086 21.8763 0.000185862C7.88847 0.00706086 4.82222 -0.615814 2.06259 2.24556Z"
+                                        fill="url(#paint0_linear)" />
+                                    <path
+                                        d="M16.4972 4.31629C11.5046 4.31629 6.76361 3.87217 4.95274 8.51967C4.20474 10.4392 4.31336 12.932 4.31336 16.5015C4.31336 19.6338 4.21299 22.5777 4.95274 24.482C6.75949 29.1323 11.539 28.6868 16.4945 28.6868C21.2754 28.6868 26.2047 29.1845 28.0376 24.482C28.787 22.5433 28.677 20.0875 28.677 16.5015C28.677 11.7413 28.9396 8.66817 26.631 6.36092C24.2935 4.02342 21.1324 4.31629 16.4917 4.31629H16.4972ZM15.4055 6.51217C25.8197 6.49567 27.1452 5.33792 26.4137 21.4213C26.1539 27.1097 21.8226 26.4854 16.4986 26.4854C6.79111 26.4854 6.51199 26.2077 6.51199 16.496C6.51199 6.67167 7.28199 6.51767 15.4055 6.50942V6.51217ZM23.001 8.53479C22.1939 8.53479 21.5394 9.18929 21.5394 9.99642C21.5394 10.8035 22.1939 11.458 23.001 11.458C23.8081 11.458 24.4626 10.8035 24.4626 9.99642C24.4626 9.18929 23.8081 8.53479 23.001 8.53479ZM16.4972 10.2439C13.0419 10.2439 10.241 13.0462 10.241 16.5015C10.241 19.9569 13.0419 22.7578 16.4972 22.7578C19.9526 22.7578 22.7521 19.9569 22.7521 16.5015C22.7521 13.0462 19.9526 10.2439 16.4972 10.2439ZM16.4972 12.4398C21.8666 12.4398 21.8735 20.5633 16.4972 20.5633C11.1292 20.5633 11.121 12.4398 16.4972 12.4398Z"
+                                        fill="white" />
+                                </g>
+                                <defs>
+                                    <linearGradient id="paint0_linear" x1="2.12587" y1="30.8924" x2="32.7959"
+                                        y2="4.3479" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#FFDD55" />
+                                        <stop offset="0.5" stop-color="#FF543E" />
+                                        <stop offset="1" stop-color="#C837AB" />
+                                    </linearGradient>
+                                    <clipPath id="clip0">
+                                        <rect width="33" height="33" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span class="v-hidden">Инстаграм</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="nav header__nav">
+            <div class="container nav__container">
+                <ul class="nav__list list-reset">
+                    <li class="nav__item"><a href="#">Услуги</a></li>
+                    <li class="nav__item"><a href="#">Прайс-лист</a></li>
+                    <li class="nav__item"><a href="#">Автозапчасти</a></li>
+                    <li class="nav__item"><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
+
+    <main>
+        <section class="intro" style="background-image: url(assets/img/intro_bg.jpg);">
+            <div class="container intro__container">
+                <h1 class="intro__title"><span>Ремонт автомобилей </span> <br>
+                    в Екатеринбурге</h1>
+                <p class="intro__descr">Автосервис по ремонту и обслуживанию <br>
+                    легковых автомобилей любой сложности</p>
+                <button class="btn btn-red intro__btn">Записаться на диагностику</button>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <div class="container services__container">
+                <h2 class="title">Наши услуги</h2>
+                <ul class="services__list list-reset">
+                    <li class="services__item">
+                        <div class="services__block">
+                            <div class="services__img">
+                                <img src="assets/img/services-1.png" alt="Icon">
+                            </div>
+                            <h3 class="services__title"><span>Общая диагностика автомобиля</span></h3>
+                        </div>
+                    </li>
+                    <li class="services__item">
+                        <div class="services__block">
+                            <div class="services__img">
+                                <img src="assets/img/services-2.png" alt="Icon">
+                            </div>
+                            <h3 class="services__title"><span>Ремонт двигателя</span></h3>
+                        </div>
+                    </li>
+                    <li class="services__item">
+                        <div class="services__block">
+                            <div class="services__img">
+                                <img src="assets/img/services-3.png" alt="Icon">
+                            </div>
+                            <h3 class="services__title"><span>Шиномонтаж,
+                                    рихтовка дисков</span></h3>
+                        </div>
+                    </li>
+                    <li class="services__item">
+                        <div class="services__block">
+                            <div class="services__img">
+                                <img src="assets/img/services-4.png" alt="Icon">
+                            </div>
+                            <h3 class="services__title"><span>Покрасочные
+                                    работы</span></h3>
+                        </div>
+                    </li>
+                    <li class="services__item">
+                        <div class="services__block">
+                            <div class="services__img">
+                                <img src="assets/img/services-5.png" alt="Icon">
+                            </div>
+                            <h3 class="services__title"><span>Сход-развал</span></h3>
+                        </div>
+                    </li>
+                    <li class="services__item">
+                        <div class="services__block">
+                            <div class="services__img">
+                                <img src="assets/img/services-6.png" alt="Icon">
+                            </div>
+                            <h3 class="services__title"><span>Балансировка
+                                    колес</span></h3>
+                        </div>
+                    </li>
+                    <li class="services__item">
+                        <div class="services__block">
+                            <div class="services__img">
+                                <img src="assets/img/services-7.png" alt="Icon">
+                            </div>
+                            <h3 class="services__title"><span>Ремонт системы
+                                    управления</span></h3>
+                        </div>
+                    </li>
+                    <li class="services__item">
+                        <div class="services__block">
+                            <div class="services__img">
+                                <img src="assets/img/services-8.png" alt="Icon">
+                            </div>
+                            <h3 class="services__title"><span>Диагностика
+                                    электроники авто</span></h3>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="price" id="price">
+            <div class="container price__contaier">
+                <h2 class="title">Прайс-лист</h2>
+
+                <table class="price__table">
+                    <thead class="price__thead">
+                        <tr>
+                            <td>Виды услуг</td>
+                            <td>Стоимость</td>
+                        </tr>
+                    </thead>
+                    <tbody class="price__tbody">
+                        <tr>
+                            <td>Автокондиционеры, заправка, ремонт</td>
+                            <td>от 500 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Автомасла, расходники, запчасти</td>
+                            <td>от 850 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Диагностика и ремонт ходовой части автомобиля</td>
+                            <td>от 1500 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Замена масел</td>
+                            <td>от 350 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Замена тормозных колодок</td>
+                            <td>от 2500 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Компьютерная диагностика автомобиля</td>
+                            <td>от 3500 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Проверка тормозной жидкости</td>
+                            <td>от 500 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Ремонт и диагностика инжектора</td>
+                            <td>от 2500 руб.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="block-center">
+                    <button class="btn btn-outline-red price__btn">Скачать прайс-лист</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="repair">
+            <div class="container repair__container">
+                <h2 class="title">Делаем ремонт как для себя</h2>
+                <ul class="repair__list list-reset">
+                    <li class="repair__item">
+                        <span class="numb">1</span>
+                        <div class="repair__block">
+                            <div class="repair__img">
+                                <img src="assets/img/repair-1.png" alt="Icon">
+                            </div>
+                            <h3 class="repair__title">Вы оставляете
+                                заявку на сайте</h3>
+                            <p class="repair__descr">Менеджер свяжется
+                                с вами и договорится
+                                о диагностике</p>
+                        </div>
+                    </li>
+                    <li class="repair__item">
+                        <span class="numb">2</span>
+                        <div class="repair__block">
+                            <div class="repair__img">
+                                <img src="assets/img/repair-2.png" alt="Icon">
+                            </div>
+                            <h3 class="repair__title">Мы проводим
+                                осмотр автомобиля</h3>
+                            <p class="repair__descr">Выявляем поломки
+                                и подготавливаем список
+                                запчастей для ремонта</p>
+                        </div>
+                    </li>
+                    <li class="repair__item">
+                        <span class="numb">3</span>
+                        <div class="repair__block">
+                            <div class="repair__img">
+                                <img src="assets/img/repair-3.png" alt="Icon">
+                            </div>
+                            <h3 class="repair__title">Подбор и поиск
+                                запчастей</h3>
+                            <p class="repair__descr">Согласовываем с вами
+                                список запчастей
+                                и приступаем к их подбору</p>
+                        </div>
+                    </li>
+                    <li class="repair__item">
+                        <span class="numb">4</span>
+                        <div class="repair__block">
+                            <div class="repair__img">
+                                <img src="assets/img/repair-4.png" alt="Icon">
+                            </div>
+                            <h3 class="repair__title">Согласовываем
+                                смету</h3>
+                            <p class="repair__descr">Никаких дополнительных
+                                платежей и навязанных
+                                услуг</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="auto-parts" id="auto-parts">
+            <div class="container auto-parts__container">
+                <h2 class="title">Мы так же поставляем автозапчасти</h2>
+                <p class="auto-parts__descr">В нашем автосервисе большой выбор автозапчастей в наличии и под заказ.
+                    Наши специалисты помогут вам быстро подобрать автозапчасти для вашего автомобиля.</p>
+
+                <div class="auto-parts__block">
+                    <div class="auto-parts__wrap">
+                        <h3 class="auto-parts__title">Почему стоит заказывать у нас</h3>
+                        <ul class="auto-parts__list list-reset">
+                            <li class="auto-parts__item">
+                                <i class="check"></i>
+                                Быстрые сроки поставки
+                            </li>
+                            <li class="auto-parts__item">
+                                <i class="check"></i>
+                                Гарантия на запчасти и работы
+                                при покупки автозачастей
+                            </li>
+                            <li class="auto-parts__item">
+                                <i class="check"></i>
+                                Более ста тысяч автозапчастей
+                                в наличии
+                            </li>
+                            <li class="auto-parts__item">
+                                <i class="check"></i>
+                                Выгодная цена, разные
+                                возможности оплаты
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="block-center">
+                    <button class="btn btn-red auto-parts__btn">Заказать автозапчасти</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio" id="portfolio">
+            <div class="container portfolio__container">
+                <h2 class="title">Мы профессионалы своего дела</h2>
+
+                <div class="portfolio__block">
+                    
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="modal" id="modal">
+        <div class="modal__item" data-modal-target="form">
+            <button class="modal__close modal--close" aria-label="close modal"></button>
+            <h3 class="modal__title">Modal</h3>
+            <div class="modal__content">
+
+            </div>
+        </div>
+    </div>
 
 
 </body>
